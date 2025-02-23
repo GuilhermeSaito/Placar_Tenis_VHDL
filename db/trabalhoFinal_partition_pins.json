@@ -1,0 +1,225 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_unidade[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_unidade[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_unidade[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_unidade[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_unidade[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_dezena[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_dezena[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_dezena[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_dezena[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar1_dezena[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_unidade[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_unidade[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_unidade[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_unidade[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_unidade[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_dezena[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_dezena[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_dezena[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_dezena[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_placar2_dezena[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_seg_game2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_debug",
+					"strict" : false
+				},
+				{
+					"name" : "switch_reset_vga",
+					"strict" : false
+				},
+				{
+					"name" : "switch_reset",
+					"strict" : false
+				},
+				{
+					"name" : "MAX10_CLK1_50",
+					"strict" : false
+				},
+				{
+					"name" : "btn_placar1",
+					"strict" : false
+				},
+				{
+					"name" : "btn_placar2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
