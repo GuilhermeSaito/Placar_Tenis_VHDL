@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu Feb 20 22:14:02 2025
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : trabalhoFinal
+Top-level Entity Name : trabalhoFinal
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 858 / 49,760 ( 2 % )
+    Total combinational functions : 853 / 49,760 ( 2 % )
+    Dedicated logic registers : 62 / 49,760 ( < 1 % )
+Total registers : 62
+Total pins : 62 / 360 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

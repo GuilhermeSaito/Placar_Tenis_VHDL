@@ -1,0 +1,90 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity trabalhoFinal is
+    Port (
+        MAX10_CLK1_50 : in  STD_LOGIC;  -- Clock principal da placa (50MHz)
+        VGA_HS        : out STD_LOGIC;  -- Sinal de sincronização horizontal
+        VGA_VS        : out STD_LOGIC;  -- Sinal de sincronização vertical
+        VGA_R         : out STD_LOGIC_VECTOR(3 downto 0); -- Vermelho (4 bits)
+        VGA_G         : out STD_LOGIC_VECTOR(3 downto 0); -- Verde (4 bits)
+        VGA_B         : out STD_LOGIC_VECTOR(3 downto 0)  -- Azul (4 bits)
+        btn_placar1                     : in  STD_LOGIC;
+        btn_placar2                     : in  STD_LOGIC;
+        switch_reset                    : in  STD_LOGIC;
+        display_seg_placar1_unidade     : out STD_LOGIC_VECTOR (6 downto 0);
+        display_seg_placar1_dezena      : out STD_LOGIC_VECTOR (6 downto 0);
+        display_seg_placar2_unidade     : out STD_LOGIC_VECTOR (6 downto 0);
+        display_seg_placar2_dezena      : out STD_LOGIC_VECTOR (6 downto 0);
+        led_debug                       : out STD_LOGIC
+    );
+end trabalhoFinal;
+
+architecture Behavioral of trabalhoFinal is
+    -- Sinal para o clock correto de 74.25MHz gerado por um PLL
+    signal clk_74M25 : STD_LOGIC;
+
+    -- Sinais internos
+    signal pixel_x, pixel_y : INTEGER;
+    signal video_on : STD_LOGIC;
+
+    signal number0               : integer;
+    signal number1               : integer;
+    signal number2               : integer;
+    signal number3               : integer;
+
+begin
+    -- Instância do PLL para gerar 74.25 MHz
+    pll_inst: entity work.pll_manual
+        port map (
+            inclk0  => MAX10_CLK1_50,
+            clk_out      => clk_74M25
+        );
+
+    -- Instância do controlador VGA
+    vga_ctrl: entity work.vga_controller
+        port map (
+            clk      => clk_74M25,  -- Usar o clock correto para VGA
+            VGA_HS   => VGA_HS,
+            VGA_VS   => VGA_VS,
+            pixel_x  => pixel_x,
+            pixel_y  => pixel_y,
+            video_on => video_on
+        );
+
+    -- Definição do fundo rosa (mistura de vermelho e azul)
+    -- VGA_R <= "1111" when char_pixel = '1' else "0000";  -- Vermelho máximo
+    -- VGA_G <= "1111" when char_pixel = '1' else "0000";  -- Verde máximo
+    -- VGA_B <= "1111" when char_pixel = '1' else "0000";  -- Azul máximo
+    VGA_R <= "1111";  -- Máximo de vermelho
+    VGA_G <= "0000";  -- Sem verde
+    VGA_B <= "1111";  -- Máximo de azul
+
+
+
+    --placar_logic: entity work.incremento_reset_placar
+    --    port map (
+    --        clk                                 => MAX10_CLK1_50,
+    --        botao_placar1                       => btn_placar1,
+    --        botao_placar2                       => btn_placar2,
+    --        switch_reset                        => switch_reset,
+    --        number0                             => number0,
+    --        number1                             => number1,
+    --        number2                             => number2,
+    --        number3                             => number3,
+    --        led                                 => led_debug
+    --    );
+--
+    --display_sete_seg: entity work.display_sete_seg
+    --    port map (
+    --        number0     => number0,
+    --        number1     => number1,
+    --        number2     => number2,
+    --        number3     => number3,
+    --        HEX0        => display_seg_placar1_unidade,
+    --        HEX1        => display_seg_placar1_dezena,
+    --        HEX2        => display_seg_placar2_unidade,
+    --        HEX3        => display_seg_placar2_dezena
+    --    );
+
+end Behavioral;

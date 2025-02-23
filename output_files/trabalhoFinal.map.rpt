@@ -1,0 +1,1203 @@
+Analysis & Synthesis report for trabalhoFinal
+Thu Feb 20 22:13:45 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: VGA_drvr:b2v_inst
+ 14. Parameter Settings for User Entity Instance: pll_25MHz:b2v_inst1|altpll:altpll_component
+ 15. Parameter Settings for User Entity Instance: incremento_reset_placar:placar_logic|divider:di
+ 16. Parameter Settings for User Entity Instance: incremento_reset_placar:placar_logic|debounce_v1:de
+ 17. Parameter Settings for User Entity Instance: incremento_reset_placar:placar_logic|debounce_v1:de2
+ 18. altpll Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "incremento_reset_placar:placar_logic"
+ 20. Port Connectivity Checks: "pll_25MHz:b2v_inst1"
+ 21. Port Connectivity Checks: "VGA_drvr:b2v_inst"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Feb 20 22:13:45 2025       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; trabalhoFinal                               ;
+; Top-level Entity Name              ; trabalhoFinal                               ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 858                                         ;
+;     Total combinational functions  ; 852                                         ;
+;     Dedicated logic registers      ; 62                                          ;
+; Total registers                    ; 62                                          ;
+; Total pins                         ; 62                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; trabalhoFinal      ; trabalhoFinal      ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; pll.vhd                          ; yes             ; User Wizard-Generated File   ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/pll.vhd                     ;         ;
+; placar_vga.vhd                   ; yes             ; User VHDL File               ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd              ;         ;
+; debounce_v1.vhd                  ; yes             ; User VHDL File               ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/debounce_v1.vhd             ;         ;
+; basic_divider.vhd                ; yes             ; User VHDL File               ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/basic_divider.vhd           ;         ;
+; incremento_reset_placar.vhd      ; yes             ; User VHDL File               ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/incremento_reset_placar.vhd ;         ;
+; display_sete_seg.vhd             ; yes             ; User VHDL File               ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/display_sete_seg.vhd        ;         ;
+; vga_controller.vhd               ; yes             ; User VHDL File               ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/vga_controller.vhd          ;         ;
+; TrabalhoFinal.vhd                ; yes             ; User VHDL File               ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd           ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; d:/apps/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                                      ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; d:/apps/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                  ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/apps/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                                 ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/apps/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                               ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/apps/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                               ;         ;
+; db/pll_25mhz_altpll.v            ; yes             ; Auto-Generated Megafunction  ; D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/db/pll_25mhz_altpll.v       ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Estimated Total logic elements              ; 858                              ;
+;                                             ;                                  ;
+; Total combinational functions               ; 852                              ;
+; Logic element usage by number of LUT inputs ;                                  ;
+;     -- 4 input functions                    ; 440                              ;
+;     -- 3 input functions                    ; 185                              ;
+;     -- <=2 input functions                  ; 227                              ;
+;                                             ;                                  ;
+; Logic elements by mode                      ;                                  ;
+;     -- normal mode                          ; 616                              ;
+;     -- arithmetic mode                      ; 236                              ;
+;                                             ;                                  ;
+; Total registers                             ; 62                               ;
+;     -- Dedicated logic registers            ; 62                               ;
+;     -- I/O registers                        ; 0                                ;
+;                                             ;                                  ;
+; I/O pins                                    ; 62                               ;
+;                                             ;                                  ;
+; Embedded Multiplier 9-bit elements          ; 0                                ;
+;                                             ;                                  ;
+; Total PLLs                                  ; 1                                ;
+;     -- PLLs                                 ; 1                                ;
+;                                             ;                                  ;
+; Maximum fan-out node                        ; VGA_drvr:b2v_inst|v_display_on~3 ;
+; Maximum fan-out                             ; 89                               ;
+; Total fan-out                               ; 2999                             ;
+; Average fan-out                             ; 2.89                             ;
++---------------------------------------------+----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
++--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                        ; Entity Name             ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------+-------------------------+--------------+
+; |trabalhoFinal                             ; 852 (0)             ; 62 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 62   ; 0            ; 0          ; |trabalhoFinal                                                                             ; trabalhoFinal           ; work         ;
+;    |VGA_drvr:b2v_inst|                     ; 77 (77)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|VGA_drvr:b2v_inst                                                           ; VGA_drvr                ; work         ;
+;    |display_sete_seg:display_sete_seg|     ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|display_sete_seg:display_sete_seg                                           ; display_sete_seg        ; work         ;
+;    |incremento_reset_placar:placar_logic|  ; 104 (92)            ; 41 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|incremento_reset_placar:placar_logic                                        ; incremento_reset_placar ; work         ;
+;       |debounce_v1:de2|                    ; 4 (4)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|incremento_reset_placar:placar_logic|debounce_v1:de2                        ; debounce_v1             ; work         ;
+;       |debounce_v1:de|                     ; 4 (4)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|incremento_reset_placar:placar_logic|debounce_v1:de                         ; debounce_v1             ; work         ;
+;       |divider:di|                         ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|incremento_reset_placar:placar_logic|divider:di                             ; divider                 ; work         ;
+;    |placar_vga:b2v_inst2|                  ; 650 (650)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|placar_vga:b2v_inst2                                                        ; placar_vga              ; work         ;
+;    |pll_25MHz:b2v_inst1|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|pll_25MHz:b2v_inst1                                                         ; pll_25MHz               ; work         ;
+;       |altpll:altpll_component|            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|pll_25MHz:b2v_inst1|altpll:altpll_component                                 ; altpll                  ; work         ;
+;          |pll_25MHz_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trabalhoFinal|pll_25MHz:b2v_inst1|altpll:altpll_component|pll_25MHz_altpll:auto_generated ; pll_25MHz_altpll        ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------+-------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                 ;
++----------------------------------------------------+---------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                   ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------------------+------------------------+
+; placar_vga:b2v_inst2|temp_pixel_message_active     ; placar_vga:b2v_inst2|process_0        ; yes                    ;
+; placar_vga:b2v_inst2|temp_win_message_active       ; placar_vga:b2v_inst2|mostrar_ganhador ; yes                    ;
+; placar_vga:b2v_inst2|ganhador[1]                   ; placar_vga:b2v_inst2|mostrar_ganhador ; yes                    ;
+; placar_vga:b2v_inst2|ganhador[0]                   ; placar_vga:b2v_inst2|mostrar_ganhador ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                                       ;                        ;
++----------------------------------------------------+---------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++----------------------------------------+---------------------------------------+
+; Register name                          ; Reason for Removal                    ;
++----------------------------------------+---------------------------------------+
+; VGA_drvr:b2v_inst|blue[1..3]           ; Merged with VGA_drvr:b2v_inst|blue[0] ;
+; VGA_drvr:b2v_inst|green[0..3]          ; Merged with VGA_drvr:b2v_inst|blue[0] ;
+; VGA_drvr:b2v_inst|red[0..3]            ; Merged with VGA_drvr:b2v_inst|blue[0] ;
+; Total Number of Removed Registers = 11 ;                                       ;
++----------------------------------------+---------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; Inverted Register Statistics                                   ;
++------------------------------------------------------+---------+
+; Inverted Register                                    ; Fan out ;
++------------------------------------------------------+---------+
+; incremento_reset_placar:placar_logic|botao1_liberado ; 1       ;
+; incremento_reset_placar:placar_logic|botao2_liberado ; 2       ;
+; Total number of inverted registers = 2               ;         ;
++------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |trabalhoFinal|incremento_reset_placar:placar_logic|n6_rep[0]                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |trabalhoFinal|incremento_reset_placar:placar_logic|n7_rep[0]                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |trabalhoFinal|incremento_reset_placar:placar_logic|debounce_v1:de|counter_out[0]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |trabalhoFinal|incremento_reset_placar:placar_logic|debounce_v1:de2|counter_out[0] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |trabalhoFinal|VGA_drvr:b2v_inst|v_count[3]                                        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |trabalhoFinal|incremento_reset_placar:placar_logic|n4_rep[0]                      ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |trabalhoFinal|incremento_reset_placar:placar_logic|n5_rep[3]                      ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |trabalhoFinal|incremento_reset_placar:placar_logic|n0_rep[3]                      ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |trabalhoFinal|incremento_reset_placar:placar_logic|n1_rep[3]                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_drvr:b2v_inst ;
++-----------------+-------+--------------------------------------+
+; Parameter Name  ; Value ; Type                                 ;
++-----------------+-------+--------------------------------------+
+; h_back_porch    ; 48    ; Signed Integer                       ;
+; h_display       ; 640   ; Signed Integer                       ;
+; h_front_porch   ; 16    ; Signed Integer                       ;
+; h_retrace       ; 96    ; Signed Integer                       ;
+; v_back_porch    ; 33    ; Signed Integer                       ;
+; v_display       ; 480   ; Signed Integer                       ;
+; v_front_porch   ; 10    ; Signed Integer                       ;
+; v_retrace       ; 2     ; Signed Integer                       ;
+; color_bits      ; 4     ; Signed Integer                       ;
+; h_sync_polarity ; '0'   ; Enumerated                           ;
+; v_sync_polarity ; '0'   ; Enumerated                           ;
+; h_counter_size  ; 10    ; Signed Integer                       ;
+; v_counter_size  ; 10    ; Signed Integer                       ;
++-----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pll_25MHz:b2v_inst1|altpll:altpll_component ;
++-------------------------------+-----------------------------+----------------------------+
+; Parameter Name                ; Value                       ; Type                       ;
++-------------------------------+-----------------------------+----------------------------+
+; OPERATION_MODE                ; NORMAL                      ; Untyped                    ;
+; PLL_TYPE                      ; AUTO                        ; Untyped                    ;
+; LPM_HINT                      ; CBX_MODULE_PREFIX=pll_25MHz ; Untyped                    ;
+; QUALIFY_CONF_DONE             ; OFF                         ; Untyped                    ;
+; COMPENSATE_CLOCK              ; CLK0                        ; Untyped                    ;
+; SCAN_CHAIN                    ; LONG                        ; Untyped                    ;
+; PRIMARY_CLOCK                 ; INCLK0                      ; Untyped                    ;
+; INCLK0_INPUT_FREQUENCY        ; 20000                       ; Signed Integer             ;
+; INCLK1_INPUT_FREQUENCY        ; 0                           ; Untyped                    ;
+; GATE_LOCK_SIGNAL              ; NO                          ; Untyped                    ;
+; GATE_LOCK_COUNTER             ; 0                           ; Untyped                    ;
+; LOCK_HIGH                     ; 1                           ; Untyped                    ;
+; LOCK_LOW                      ; 1                           ; Untyped                    ;
+; VALID_LOCK_MULTIPLIER         ; 1                           ; Untyped                    ;
+; INVALID_LOCK_MULTIPLIER       ; 5                           ; Untyped                    ;
+; SWITCH_OVER_ON_LOSSCLK        ; OFF                         ; Untyped                    ;
+; SWITCH_OVER_ON_GATED_LOCK     ; OFF                         ; Untyped                    ;
+; ENABLE_SWITCH_OVER_COUNTER    ; OFF                         ; Untyped                    ;
+; SKIP_VCO                      ; OFF                         ; Untyped                    ;
+; SWITCH_OVER_COUNTER           ; 0                           ; Untyped                    ;
+; SWITCH_OVER_TYPE              ; AUTO                        ; Untyped                    ;
+; FEEDBACK_SOURCE               ; EXTCLK0                     ; Untyped                    ;
+; BANDWIDTH                     ; 0                           ; Untyped                    ;
+; BANDWIDTH_TYPE                ; AUTO                        ; Untyped                    ;
+; SPREAD_FREQUENCY              ; 0                           ; Untyped                    ;
+; DOWN_SPREAD                   ; 0                           ; Untyped                    ;
+; SELF_RESET_ON_GATED_LOSS_LOCK ; OFF                         ; Untyped                    ;
+; SELF_RESET_ON_LOSS_LOCK       ; OFF                         ; Untyped                    ;
+; CLK9_MULTIPLY_BY              ; 0                           ; Untyped                    ;
+; CLK8_MULTIPLY_BY              ; 0                           ; Untyped                    ;
+; CLK7_MULTIPLY_BY              ; 0                           ; Untyped                    ;
+; CLK6_MULTIPLY_BY              ; 0                           ; Untyped                    ;
+; CLK5_MULTIPLY_BY              ; 1                           ; Untyped                    ;
+; CLK4_MULTIPLY_BY              ; 1                           ; Untyped                    ;
+; CLK3_MULTIPLY_BY              ; 1                           ; Untyped                    ;
+; CLK2_MULTIPLY_BY              ; 1                           ; Untyped                    ;
+; CLK1_MULTIPLY_BY              ; 1                           ; Untyped                    ;
+; CLK0_MULTIPLY_BY              ; 1                           ; Signed Integer             ;
+; CLK9_DIVIDE_BY                ; 0                           ; Untyped                    ;
+; CLK8_DIVIDE_BY                ; 0                           ; Untyped                    ;
+; CLK7_DIVIDE_BY                ; 0                           ; Untyped                    ;
+; CLK6_DIVIDE_BY                ; 0                           ; Untyped                    ;
+; CLK5_DIVIDE_BY                ; 1                           ; Untyped                    ;
+; CLK4_DIVIDE_BY                ; 1                           ; Untyped                    ;
+; CLK3_DIVIDE_BY                ; 1                           ; Untyped                    ;
+; CLK2_DIVIDE_BY                ; 1                           ; Untyped                    ;
+; CLK1_DIVIDE_BY                ; 1                           ; Untyped                    ;
+; CLK0_DIVIDE_BY                ; 2                           ; Signed Integer             ;
+; CLK9_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK8_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK7_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK6_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK5_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK4_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK3_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK2_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK1_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK0_PHASE_SHIFT              ; 0                           ; Untyped                    ;
+; CLK5_TIME_DELAY               ; 0                           ; Untyped                    ;
+; CLK4_TIME_DELAY               ; 0                           ; Untyped                    ;
+; CLK3_TIME_DELAY               ; 0                           ; Untyped                    ;
+; CLK2_TIME_DELAY               ; 0                           ; Untyped                    ;
+; CLK1_TIME_DELAY               ; 0                           ; Untyped                    ;
+; CLK0_TIME_DELAY               ; 0                           ; Untyped                    ;
+; CLK9_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK8_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK7_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK6_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK5_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK4_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK3_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK2_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK1_DUTY_CYCLE               ; 50                          ; Untyped                    ;
+; CLK0_DUTY_CYCLE               ; 50                          ; Signed Integer             ;
+; CLK9_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK8_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK7_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK6_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK5_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK4_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK3_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK2_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK1_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK0_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                    ;
+; CLK9_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK8_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK7_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK6_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK5_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK4_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK3_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK2_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK1_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; CLK0_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                    ;
+; LOCK_WINDOW_UI                ;  0.05                       ; Untyped                    ;
+; LOCK_WINDOW_UI_BITS           ; UNUSED                      ; Untyped                    ;
+; VCO_RANGE_DETECTOR_LOW_BITS   ; UNUSED                      ; Untyped                    ;
+; VCO_RANGE_DETECTOR_HIGH_BITS  ; UNUSED                      ; Untyped                    ;
+; DPA_MULTIPLY_BY               ; 0                           ; Untyped                    ;
+; DPA_DIVIDE_BY                 ; 1                           ; Untyped                    ;
+; DPA_DIVIDER                   ; 0                           ; Untyped                    ;
+; EXTCLK3_MULTIPLY_BY           ; 1                           ; Untyped                    ;
+; EXTCLK2_MULTIPLY_BY           ; 1                           ; Untyped                    ;
+; EXTCLK1_MULTIPLY_BY           ; 1                           ; Untyped                    ;
+; EXTCLK0_MULTIPLY_BY           ; 1                           ; Untyped                    ;
+; EXTCLK3_DIVIDE_BY             ; 1                           ; Untyped                    ;
+; EXTCLK2_DIVIDE_BY             ; 1                           ; Untyped                    ;
+; EXTCLK1_DIVIDE_BY             ; 1                           ; Untyped                    ;
+; EXTCLK0_DIVIDE_BY             ; 1                           ; Untyped                    ;
+; EXTCLK3_PHASE_SHIFT           ; 0                           ; Untyped                    ;
+; EXTCLK2_PHASE_SHIFT           ; 0                           ; Untyped                    ;
+; EXTCLK1_PHASE_SHIFT           ; 0                           ; Untyped                    ;
+; EXTCLK0_PHASE_SHIFT           ; 0                           ; Untyped                    ;
+; EXTCLK3_TIME_DELAY            ; 0                           ; Untyped                    ;
+; EXTCLK2_TIME_DELAY            ; 0                           ; Untyped                    ;
+; EXTCLK1_TIME_DELAY            ; 0                           ; Untyped                    ;
+; EXTCLK0_TIME_DELAY            ; 0                           ; Untyped                    ;
+; EXTCLK3_DUTY_CYCLE            ; 50                          ; Untyped                    ;
+; EXTCLK2_DUTY_CYCLE            ; 50                          ; Untyped                    ;
+; EXTCLK1_DUTY_CYCLE            ; 50                          ; Untyped                    ;
+; EXTCLK0_DUTY_CYCLE            ; 50                          ; Untyped                    ;
+; VCO_MULTIPLY_BY               ; 0                           ; Untyped                    ;
+; VCO_DIVIDE_BY                 ; 0                           ; Untyped                    ;
+; SCLKOUT0_PHASE_SHIFT          ; 0                           ; Untyped                    ;
+; SCLKOUT1_PHASE_SHIFT          ; 0                           ; Untyped                    ;
+; VCO_MIN                       ; 0                           ; Untyped                    ;
+; VCO_MAX                       ; 0                           ; Untyped                    ;
+; VCO_CENTER                    ; 0                           ; Untyped                    ;
+; PFD_MIN                       ; 0                           ; Untyped                    ;
+; PFD_MAX                       ; 0                           ; Untyped                    ;
+; M_INITIAL                     ; 0                           ; Untyped                    ;
+; M                             ; 0                           ; Untyped                    ;
+; N                             ; 1                           ; Untyped                    ;
+; M2                            ; 1                           ; Untyped                    ;
+; N2                            ; 1                           ; Untyped                    ;
+; SS                            ; 1                           ; Untyped                    ;
+; C0_HIGH                       ; 0                           ; Untyped                    ;
+; C1_HIGH                       ; 0                           ; Untyped                    ;
+; C2_HIGH                       ; 0                           ; Untyped                    ;
+; C3_HIGH                       ; 0                           ; Untyped                    ;
+; C4_HIGH                       ; 0                           ; Untyped                    ;
+; C5_HIGH                       ; 0                           ; Untyped                    ;
+; C6_HIGH                       ; 0                           ; Untyped                    ;
+; C7_HIGH                       ; 0                           ; Untyped                    ;
+; C8_HIGH                       ; 0                           ; Untyped                    ;
+; C9_HIGH                       ; 0                           ; Untyped                    ;
+; C0_LOW                        ; 0                           ; Untyped                    ;
+; C1_LOW                        ; 0                           ; Untyped                    ;
+; C2_LOW                        ; 0                           ; Untyped                    ;
+; C3_LOW                        ; 0                           ; Untyped                    ;
+; C4_LOW                        ; 0                           ; Untyped                    ;
+; C5_LOW                        ; 0                           ; Untyped                    ;
+; C6_LOW                        ; 0                           ; Untyped                    ;
+; C7_LOW                        ; 0                           ; Untyped                    ;
+; C8_LOW                        ; 0                           ; Untyped                    ;
+; C9_LOW                        ; 0                           ; Untyped                    ;
+; C0_INITIAL                    ; 0                           ; Untyped                    ;
+; C1_INITIAL                    ; 0                           ; Untyped                    ;
+; C2_INITIAL                    ; 0                           ; Untyped                    ;
+; C3_INITIAL                    ; 0                           ; Untyped                    ;
+; C4_INITIAL                    ; 0                           ; Untyped                    ;
+; C5_INITIAL                    ; 0                           ; Untyped                    ;
+; C6_INITIAL                    ; 0                           ; Untyped                    ;
+; C7_INITIAL                    ; 0                           ; Untyped                    ;
+; C8_INITIAL                    ; 0                           ; Untyped                    ;
+; C9_INITIAL                    ; 0                           ; Untyped                    ;
+; C0_MODE                       ; BYPASS                      ; Untyped                    ;
+; C1_MODE                       ; BYPASS                      ; Untyped                    ;
+; C2_MODE                       ; BYPASS                      ; Untyped                    ;
+; C3_MODE                       ; BYPASS                      ; Untyped                    ;
+; C4_MODE                       ; BYPASS                      ; Untyped                    ;
+; C5_MODE                       ; BYPASS                      ; Untyped                    ;
+; C6_MODE                       ; BYPASS                      ; Untyped                    ;
+; C7_MODE                       ; BYPASS                      ; Untyped                    ;
+; C8_MODE                       ; BYPASS                      ; Untyped                    ;
+; C9_MODE                       ; BYPASS                      ; Untyped                    ;
+; C0_PH                         ; 0                           ; Untyped                    ;
+; C1_PH                         ; 0                           ; Untyped                    ;
+; C2_PH                         ; 0                           ; Untyped                    ;
+; C3_PH                         ; 0                           ; Untyped                    ;
+; C4_PH                         ; 0                           ; Untyped                    ;
+; C5_PH                         ; 0                           ; Untyped                    ;
+; C6_PH                         ; 0                           ; Untyped                    ;
+; C7_PH                         ; 0                           ; Untyped                    ;
+; C8_PH                         ; 0                           ; Untyped                    ;
+; C9_PH                         ; 0                           ; Untyped                    ;
+; L0_HIGH                       ; 1                           ; Untyped                    ;
+; L1_HIGH                       ; 1                           ; Untyped                    ;
+; G0_HIGH                       ; 1                           ; Untyped                    ;
+; G1_HIGH                       ; 1                           ; Untyped                    ;
+; G2_HIGH                       ; 1                           ; Untyped                    ;
+; G3_HIGH                       ; 1                           ; Untyped                    ;
+; E0_HIGH                       ; 1                           ; Untyped                    ;
+; E1_HIGH                       ; 1                           ; Untyped                    ;
+; E2_HIGH                       ; 1                           ; Untyped                    ;
+; E3_HIGH                       ; 1                           ; Untyped                    ;
+; L0_LOW                        ; 1                           ; Untyped                    ;
+; L1_LOW                        ; 1                           ; Untyped                    ;
+; G0_LOW                        ; 1                           ; Untyped                    ;
+; G1_LOW                        ; 1                           ; Untyped                    ;
+; G2_LOW                        ; 1                           ; Untyped                    ;
+; G3_LOW                        ; 1                           ; Untyped                    ;
+; E0_LOW                        ; 1                           ; Untyped                    ;
+; E1_LOW                        ; 1                           ; Untyped                    ;
+; E2_LOW                        ; 1                           ; Untyped                    ;
+; E3_LOW                        ; 1                           ; Untyped                    ;
+; L0_INITIAL                    ; 1                           ; Untyped                    ;
+; L1_INITIAL                    ; 1                           ; Untyped                    ;
+; G0_INITIAL                    ; 1                           ; Untyped                    ;
+; G1_INITIAL                    ; 1                           ; Untyped                    ;
+; G2_INITIAL                    ; 1                           ; Untyped                    ;
+; G3_INITIAL                    ; 1                           ; Untyped                    ;
+; E0_INITIAL                    ; 1                           ; Untyped                    ;
+; E1_INITIAL                    ; 1                           ; Untyped                    ;
+; E2_INITIAL                    ; 1                           ; Untyped                    ;
+; E3_INITIAL                    ; 1                           ; Untyped                    ;
+; L0_MODE                       ; BYPASS                      ; Untyped                    ;
+; L1_MODE                       ; BYPASS                      ; Untyped                    ;
+; G0_MODE                       ; BYPASS                      ; Untyped                    ;
+; G1_MODE                       ; BYPASS                      ; Untyped                    ;
+; G2_MODE                       ; BYPASS                      ; Untyped                    ;
+; G3_MODE                       ; BYPASS                      ; Untyped                    ;
+; E0_MODE                       ; BYPASS                      ; Untyped                    ;
+; E1_MODE                       ; BYPASS                      ; Untyped                    ;
+; E2_MODE                       ; BYPASS                      ; Untyped                    ;
+; E3_MODE                       ; BYPASS                      ; Untyped                    ;
+; L0_PH                         ; 0                           ; Untyped                    ;
+; L1_PH                         ; 0                           ; Untyped                    ;
+; G0_PH                         ; 0                           ; Untyped                    ;
+; G1_PH                         ; 0                           ; Untyped                    ;
+; G2_PH                         ; 0                           ; Untyped                    ;
+; G3_PH                         ; 0                           ; Untyped                    ;
+; E0_PH                         ; 0                           ; Untyped                    ;
+; E1_PH                         ; 0                           ; Untyped                    ;
+; E2_PH                         ; 0                           ; Untyped                    ;
+; E3_PH                         ; 0                           ; Untyped                    ;
+; M_PH                          ; 0                           ; Untyped                    ;
+; C1_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; C2_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; C3_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; C4_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; C5_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; C6_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; C7_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; C8_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; C9_USE_CASC_IN                ; OFF                         ; Untyped                    ;
+; CLK0_COUNTER                  ; G0                          ; Untyped                    ;
+; CLK1_COUNTER                  ; G0                          ; Untyped                    ;
+; CLK2_COUNTER                  ; G0                          ; Untyped                    ;
+; CLK3_COUNTER                  ; G0                          ; Untyped                    ;
+; CLK4_COUNTER                  ; G0                          ; Untyped                    ;
+; CLK5_COUNTER                  ; G0                          ; Untyped                    ;
+; CLK6_COUNTER                  ; E0                          ; Untyped                    ;
+; CLK7_COUNTER                  ; E1                          ; Untyped                    ;
+; CLK8_COUNTER                  ; E2                          ; Untyped                    ;
+; CLK9_COUNTER                  ; E3                          ; Untyped                    ;
+; L0_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; L1_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; G0_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; G1_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; G2_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; G3_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; E0_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; E1_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; E2_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; E3_TIME_DELAY                 ; 0                           ; Untyped                    ;
+; M_TIME_DELAY                  ; 0                           ; Untyped                    ;
+; N_TIME_DELAY                  ; 0                           ; Untyped                    ;
+; EXTCLK3_COUNTER               ; E3                          ; Untyped                    ;
+; EXTCLK2_COUNTER               ; E2                          ; Untyped                    ;
+; EXTCLK1_COUNTER               ; E1                          ; Untyped                    ;
+; EXTCLK0_COUNTER               ; E0                          ; Untyped                    ;
+; ENABLE0_COUNTER               ; L0                          ; Untyped                    ;
+; ENABLE1_COUNTER               ; L0                          ; Untyped                    ;
+; CHARGE_PUMP_CURRENT           ; 2                           ; Untyped                    ;
+; LOOP_FILTER_R                 ;  1.000000                   ; Untyped                    ;
+; LOOP_FILTER_C                 ; 5                           ; Untyped                    ;
+; CHARGE_PUMP_CURRENT_BITS      ; 9999                        ; Untyped                    ;
+; LOOP_FILTER_R_BITS            ; 9999                        ; Untyped                    ;
+; LOOP_FILTER_C_BITS            ; 9999                        ; Untyped                    ;
+; VCO_POST_SCALE                ; 0                           ; Untyped                    ;
+; CLK2_OUTPUT_FREQUENCY         ; 0                           ; Untyped                    ;
+; CLK1_OUTPUT_FREQUENCY         ; 0                           ; Untyped                    ;
+; CLK0_OUTPUT_FREQUENCY         ; 0                           ; Untyped                    ;
+; INTENDED_DEVICE_FAMILY        ; MAX 10                      ; Untyped                    ;
+; PORT_CLKENA0                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKENA1                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKENA2                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKENA3                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKENA4                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKENA5                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_EXTCLKENA0               ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_EXTCLKENA1               ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_EXTCLKENA2               ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_EXTCLKENA3               ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_EXTCLK0                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_EXTCLK1                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_EXTCLK2                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_EXTCLK3                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKBAD0                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKBAD1                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK0                     ; PORT_USED                   ; Untyped                    ;
+; PORT_CLK1                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK2                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK3                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK4                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK5                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK6                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK7                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK8                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLK9                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCANDATA                 ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCANDATAOUT              ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCANDONE                 ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCLKOUT1                 ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_SCLKOUT0                 ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_ACTIVECLOCK              ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKLOSS                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_INCLK1                   ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_INCLK0                   ; PORT_USED                   ; Untyped                    ;
+; PORT_FBIN                     ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_PLLENA                   ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_CLKSWITCH                ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_ARESET                   ; PORT_USED                   ; Untyped                    ;
+; PORT_PFDENA                   ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCANCLK                  ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCANACLR                 ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCANREAD                 ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCANWRITE                ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_ENABLE0                  ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_ENABLE1                  ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_LOCKED                   ; PORT_USED                   ; Untyped                    ;
+; PORT_CONFIGUPDATE             ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_FBOUT                    ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_PHASEDONE                ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_PHASESTEP                ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_PHASEUPDOWN              ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_SCANCLKENA               ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_PHASECOUNTERSELECT       ; PORT_UNUSED                 ; Untyped                    ;
+; PORT_VCOOVERRANGE             ; PORT_CONNECTIVITY           ; Untyped                    ;
+; PORT_VCOUNDERRANGE            ; PORT_CONNECTIVITY           ; Untyped                    ;
+; M_TEST_SOURCE                 ; 5                           ; Untyped                    ;
+; C0_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C1_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C2_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C3_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C4_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C5_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C6_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C7_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C8_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; C9_TEST_SOURCE                ; 5                           ; Untyped                    ;
+; CBXI_PARAMETER                ; pll_25MHz_altpll            ; Untyped                    ;
+; VCO_FREQUENCY_CONTROL         ; AUTO                        ; Untyped                    ;
+; VCO_PHASE_SHIFT_STEP          ; 0                           ; Untyped                    ;
+; WIDTH_CLOCK                   ; 5                           ; Signed Integer             ;
+; WIDTH_PHASECOUNTERSELECT      ; 4                           ; Untyped                    ;
+; USING_FBMIMICBIDIR_PORT       ; OFF                         ; Untyped                    ;
+; DEVICE_FAMILY                 ; MAX 10                      ; Untyped                    ;
+; SCAN_CHAIN_MIF_FILE           ; UNUSED                      ; Untyped                    ;
+; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF                         ; Untyped                    ;
+; AUTO_CARRY_CHAINS             ; ON                          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS          ; OFF                         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS           ; ON                          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS        ; OFF                         ; IGNORE_CASCADE             ;
++-------------------------------+-----------------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: incremento_reset_placar:placar_logic|divider:di ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; divisor        ; 5     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: incremento_reset_placar:placar_logic|debounce_v1:de ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; counter_size   ; 1     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: incremento_reset_placar:placar_logic|debounce_v1:de2 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; counter_size   ; 1     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                                ;
++-------------------------------+---------------------------------------------+
+; Name                          ; Value                                       ;
++-------------------------------+---------------------------------------------+
+; Number of entity instances    ; 1                                           ;
+; Entity Instance               ; pll_25MHz:b2v_inst1|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                                      ;
+;     -- PLL_TYPE               ; AUTO                                        ;
+;     -- PRIMARY_CLOCK          ; INCLK0                                      ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                                       ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                           ;
+;     -- VCO_MULTIPLY_BY        ; 0                                           ;
+;     -- VCO_DIVIDE_BY          ; 0                                           ;
++-------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "incremento_reset_placar:placar_logic"                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; led  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pll_25MHz:b2v_inst1"                                                                  ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; areset ; Input  ; Info     ; Stuck at GND                                                                        ;
+; locked ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA_drvr:b2v_inst"                                                                                                ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; o_vid_display ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 62                          ;
+; cycloneiii_ff         ; 62                          ;
+;     CLR               ; 3                           ;
+;     CLR SCLR          ; 10                          ;
+;     ENA               ; 8                           ;
+;     ENA CLR           ; 8                           ;
+;     plain             ; 33                          ;
+; cycloneiii_lcell_comb ; 860                         ;
+;     arith             ; 236                         ;
+;         2 data inputs ; 158                         ;
+;         3 data inputs ; 78                          ;
+;     normal            ; 624                         ;
+;         0 data inputs ; 26                          ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 107                         ;
+;         4 data inputs ; 440                         ;
+; cycloneiii_pll        ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 9.54                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Feb 20 22:13:32 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trabalhoFinal -c trabalhoFinal
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file teste.vhd
+    Info (12022): Found design unit 1: teste-behavior File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/teste.vhd Line: 13
+    Info (12023): Found entity 1: teste File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/teste.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
+    Info (12022): Found design unit 1: pll_25mhz-SYN File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/pll.vhd Line: 53
+    Info (12023): Found entity 1: pll_25MHz File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/pll.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file placar_vga.vhd
+    Info (12022): Found design unit 1: placar_vga-behavior File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 24
+    Info (12023): Found entity 1: placar_vga File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file debounce_v1.vhd
+    Info (12022): Found design unit 1: debounce_v1-logic File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/debounce_v1.vhd Line: 36
+    Info (12023): Found entity 1: debounce_v1 File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/debounce_v1.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file basic_divider.vhd
+    Info (12022): Found design unit 1: divider-divisor File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/basic_divider.vhd Line: 24
+    Info (12023): Found entity 1: divider File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/basic_divider.vhd Line: 16
+Info (12021): Found 2 design units, including 1 entities, in source file incremento_reset_placar.vhd
+    Info (12022): Found design unit 1: incremento_reset_placar-Behavioral File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/incremento_reset_placar.vhd Line: 25
+    Info (12023): Found entity 1: incremento_reset_placar File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/incremento_reset_placar.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file display_sete_seg.vhd
+    Info (12022): Found design unit 1: display_sete_seg-Behavioral File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/display_sete_seg.vhd Line: 21
+    Info (12023): Found entity 1: display_sete_seg File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/display_sete_seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file vga_controller.vhd
+    Info (12022): Found design unit 1: VGA_drvr-behavioral File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/vga_controller.vhd Line: 98
+    Info (12023): Found entity 1: VGA_drvr File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/vga_controller.vhd Line: 52
+Info (12021): Found 2 design units, including 1 entities, in source file trabalhofinal.vhd
+    Info (12022): Found design unit 1: trabalhoFinal-Behavioral File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 26
+    Info (12023): Found entity 1: trabalhoFinal File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file text_display.vhd
+    Info (12022): Found design unit 1: text_display-Behavioral File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/text_display.vhd Line: 15
+    Info (12023): Found entity 1: text_display File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/text_display.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file font_rom.vhd
+    Info (12022): Found design unit 1: font_rom-Behavioral File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/font_rom.vhd Line: 15
+    Info (12023): Found entity 1: font_rom File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/font_rom.vhd Line: 5
+Info (12127): Elaborating entity "trabalhoFinal" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at TrabalhoFinal.vhd(112): object "teste" assigned a value but never read File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 112
+Info (12128): Elaborating entity "VGA_drvr" for hierarchy "VGA_drvr:b2v_inst" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 116
+Info (12128): Elaborating entity "pll_25MHz" for hierarchy "pll_25MHz:b2v_inst1" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 146
+Info (12128): Elaborating entity "altpll" for hierarchy "pll_25MHz:b2v_inst1|altpll:altpll_component" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/pll.vhd Line: 140
+Info (12130): Elaborated megafunction instantiation "pll_25MHz:b2v_inst1|altpll:altpll_component" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/pll.vhd Line: 140
+Info (12133): Instantiated megafunction "pll_25MHz:b2v_inst1|altpll:altpll_component" with the following parameter: File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/pll.vhd Line: 140
+    Info (12134): Parameter "bandwidth_type" = "AUTO"
+    Info (12134): Parameter "clk0_divide_by" = "2"
+    Info (12134): Parameter "clk0_duty_cycle" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "1"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=pll_25MHz"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_USED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_USED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
+    Info (12134): Parameter "width_clock" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/pll_25mhz_altpll.v
+    Info (12023): Found entity 1: pll_25MHz_altpll File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/db/pll_25mhz_altpll.v Line: 30
+Info (12128): Elaborating entity "pll_25MHz_altpll" for hierarchy "pll_25MHz:b2v_inst1|altpll:altpll_component|pll_25MHz_altpll:auto_generated" File: d:/apps/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "placar_vga" for hierarchy "placar_vga:b2v_inst2" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 152
+Warning (10492): VHDL Process Statement warning at placar_vga.vhd(334): signal "all_zeros" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 334
+Warning (10492): VHDL Process Statement warning at placar_vga.vhd(342): signal "player_char" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 342
+Warning (10492): VHDL Process Statement warning at placar_vga.vhd(357): signal "mostrar_ganhador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 357
+Warning (10492): VHDL Process Statement warning at placar_vga.vhd(365): signal "ganhador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 365
+Warning (10492): VHDL Process Statement warning at placar_vga.vhd(373): signal "temp_pixel_active" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 373
+Warning (10492): VHDL Process Statement warning at placar_vga.vhd(373): signal "temp_pixel_message_active" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 373
+Warning (10492): VHDL Process Statement warning at placar_vga.vhd(373): signal "temp_win_message_active" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 373
+Warning (10631): VHDL Process Statement warning at placar_vga.vhd(295): inferring latch(es) for signal or variable "ganhador", which holds its previous value in one or more paths through the process File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Warning (10631): VHDL Process Statement warning at placar_vga.vhd(295): inferring latch(es) for signal or variable "temp_pixel_message_active", which holds its previous value in one or more paths through the process File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Warning (10631): VHDL Process Statement warning at placar_vga.vhd(295): inferring latch(es) for signal or variable "temp_win_message_active", which holds its previous value in one or more paths through the process File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Info (10041): Inferred latch for "temp_win_message_active" at placar_vga.vhd(295) File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Info (10041): Inferred latch for "temp_pixel_message_active" at placar_vga.vhd(295) File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Info (10041): Inferred latch for "ganhador[0]" at placar_vga.vhd(295) File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Info (10041): Inferred latch for "ganhador[1]" at placar_vga.vhd(295) File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Info (10041): Inferred latch for "ganhador[2]" at placar_vga.vhd(295) File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Info (10041): Inferred latch for "ganhador[3]" at placar_vga.vhd(295) File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+Info (12128): Elaborating entity "incremento_reset_placar" for hierarchy "incremento_reset_placar:placar_logic" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 185
+Info (12128): Elaborating entity "divider" for hierarchy "incremento_reset_placar:placar_logic|divider:di" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/incremento_reset_placar.vhd Line: 56
+Info (12128): Elaborating entity "debounce_v1" for hierarchy "incremento_reset_placar:placar_logic|debounce_v1:de" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/incremento_reset_placar.vhd Line: 57
+Info (12128): Elaborating entity "display_sete_seg" for hierarchy "display_sete_seg:display_sete_seg" File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 203
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch placar_vga:b2v_inst2|ganhador[1] has unsafe behavior File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal incremento_reset_placar:placar_logic|n6_rep[3] File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/incremento_reset_placar.vhd Line: 62
+Warning (13012): Latch placar_vga:b2v_inst2|ganhador[0] has unsafe behavior File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/placar_vga.vhd Line: 295
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal incremento_reset_placar:placar_logic|n6_rep[3] File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/incremento_reset_placar.vhd Line: 62
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "display_seg_placar1_unidade[0]" is stuck at GND File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 16
+    Warning (13410): Pin "display_seg_placar1_unidade[2]" is stuck at GND File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 16
+    Warning (13410): Pin "display_seg_placar1_dezena[1]" is stuck at GND File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 17
+    Warning (13410): Pin "display_seg_placar1_dezena[2]" is stuck at GND File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 17
+    Warning (13410): Pin "display_seg_placar2_unidade[0]" is stuck at GND File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 18
+    Warning (13410): Pin "display_seg_placar2_unidade[2]" is stuck at GND File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 18
+    Warning (13410): Pin "display_seg_placar2_dezena[1]" is stuck at GND File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 19
+    Warning (13410): Pin "display_seg_placar2_dezena[2]" is stuck at GND File: D:/Downloads_d/aulasUTFPR/aulasUTFPR/2024_2/logica_reconfiguravel/TrabalhoFinal/TrabalhoFinal.vhd Line: 19
+Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 209 assignments for entity "tabalhoFinal" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[10] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[11] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[12] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[13] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[14] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[15] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[8] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[9] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to ARDUINO_RESET_N -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[10] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[11] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[12] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[13] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[14] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[15] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[16] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[17] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[18] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[19] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[20] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[21] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[22] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[23] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[24] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[25] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[26] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[27] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[28] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[29] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[30] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[31] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[32] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[33] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[34] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[35] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[8] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[9] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_CS_N -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SCLK -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDI -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDO -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50 -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50 -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3] -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity tabalhoFinal was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity tabalhoFinal -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity tabalhoFinal -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 922 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 57 output pins
+    Info (21061): Implemented 859 logic cells
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 236 warnings
+    Info: Peak virtual memory: 4872 megabytes
+    Info: Processing ended: Thu Feb 20 22:13:45 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
+
+

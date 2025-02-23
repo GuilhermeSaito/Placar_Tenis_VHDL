@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : -7.928
+TNS   : -25.470
+
+Type  : Slow 1200mV 85C Model Setup 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -6.256
+TNS   : -6.256
+
+Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
+Slack : -1.727
+TNS   : -14.641
+
+Type  : Slow 1200mV 85C Model Setup 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : -1.223
+TNS   : -4.476
+
+Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : 0.920
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.637
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.718
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : -7.502
+TNS   : -24.555
+
+Type  : Slow 1200mV 0C Model Setup 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.318
+TNS   : -5.318
+
+Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -1.534
+TNS   : -11.515
+
+Type  : Slow 1200mV 0C Model Setup 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : -1.020
+TNS   : -3.490
+
+Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : 0.826
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.213
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.601
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.702
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : -3.408
+TNS   : -9.982
+
+Type  : Fast 1200mV 0C Model Setup 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.683
+TNS   : -2.683
+
+Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -0.695
+TNS   : -2.903
+
+Type  : Fast 1200mV 0C Model Setup 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : 0.052
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.511
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'incremento_reset_placar:placar_logic|divider:di|temp'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'incremento_reset_placar:placar_logic|n6_rep[0]'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.373
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'b2v_inst1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.754
+TNS   : 0.000
+
+------------------------------------------------------------
